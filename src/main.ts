@@ -2,7 +2,7 @@ import "./style.css";
 import "./bases/08-imp-exp";
 import { getHeroesByOwner } from "./bases/08-imp-exp";
 import { Owner } from "./bases/data/heroes.data";
-import './bases/09-promises'
+import './bases/10-fetch-api'
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <h1>Hola mundo</h1>
