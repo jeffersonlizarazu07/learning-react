@@ -1,0 +1,26 @@
+import type { CSSProperties } from "react";
+
+export interface Props {
+  name: string;
+  quantity?: number;
+}
+
+export const ItemCounter = ({ name, quantity }: Props) => {
+  const myStyles: CSSProperties = {
+    display: "flex",
+    gap: 10,
+  };
+
+  const nintendoSwitch: CSSProperties = {
+    width: 150,
+  };
+
+  return (
+    <section style={myStyles}>
+      <span style={nintendoSwitch}>{name}</span>
+      <button>-1</button>
+      <span>{quantity}</span>
+      <button>+1</button>
+    </section>
+  );
+};
