@@ -1,16 +1,43 @@
-import { expect, test } from 'vitest'
-import { add } from './math.helper'
-test('should add two positives numbers', () => {
-    // ! 1. Arrange
+import { describe, expect, test } from 'vitest'
+import { add, divide, multiliply, subtract } from './math.helper'
 
-    const a = 2;
-    const b = 2;
 
-    // ! 2. Act
+// describe('add', () => {
+//     test('should add two positives numbers', () => {
+//         // ! 1. Arrange
 
-    const result = add(a, b)
+//         const a = 2;
+//         const b = 2;
 
-    // ! Assert
+//         // ! 2. Act
 
-    expect(result).toBe(a + b)
+//         const result = add(a, b)
+
+//         // ! Assert
+
+//         expect(result).toBe(a + b)
+//     })
+// })
+
+// describe('subtract', () => {
+//     test('should add two negative numbers', () => {
+
+
+//         const a = 10
+//         const b = 2
+
+//         const result = subtract(a, b)
+//         expect(result).toBe(a - b)
+//     })
+// })
+
+describe('multiply', () => {
+    test('should add two multiply numbers', () => {
+        const a = 10
+        const b = 2
+
+        const result = multiliply(a, b)
+        console.log({result})
+        expect(result).toBe(a * b)
+    })
 })
