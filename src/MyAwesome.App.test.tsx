@@ -19,13 +19,9 @@ describe("MyAwesomeApp", () => {
   render(<MyAwesomeApp />);
   screen.debug();
 
-  const h1 = screen.getByRole("heading", {
-    level: 1,
+  test("Should match snapshot", () => {
+    const { container } = render(<MyAwesomeApp />);
+
+    expect(container).toMatchSnapshot();
   });
-
-  console.log(h1.innerHTML)
-  const h3 = screen.querySelector("h3");
-
-  expect(h1?.innerHTML).toContain("Jefferson");
-  expect(h3?.innerHTML).toContain("Lizarazu");
 });
